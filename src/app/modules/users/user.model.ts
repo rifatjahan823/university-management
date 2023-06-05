@@ -8,8 +8,8 @@ type UserModel = Model<IUser,object>;
 // 2. Create a Schema corresponding to the document interface.
 const userSchema = new Schema<IUser,UserModel >({
   id: { type: String, required: true },
-  roll: { type: String, required: true },
-  password: { type: Number, required: true },
+  role: { type: String, required: true },
+  password: { type: String, required: true },
 },{
     timestamps:true
 })
