@@ -1,23 +1,28 @@
-import { Request, Response } from "express";
-import { User } from "./user.model";
+import ApiError from "../../../Error/ApiError";
+import config from "../../../config/index";
 import { IUser } from "./user.interface";
-import config from "../../../config";
+import { User } from "./user.model";
 import { generateUserId } from "./user.utils";
 
-export const createUser =async(user:IUser):Promise<IUser|null >=>{
-    //auto generated incremental id
-    const id=await generateUserId()
-    user.id=id
-    //defult password
-    if(!user.password){
-        user.password=config.defult_user_pass as string
-    }
+
+ const createUser =async(user:IUser):Promise<IUser | null>=>{
+
+//   // auto generated incremental id
+  const id = await generateUserId();
+  user.id = id;
+  // default password
+  if (!user.password) {
+    user.password = config.default_user_pass as string;
+  }
 
     const createdUser=await User.create(user)
-    if(!createdUser){
-        throw new Error('Fail to Create User')
+    if(!createUser){
+        throw new ApiError(400, 'Failed to create');
     }
-return createdUser
+    return createdUser
     
 }
 
+export const UserService={
+    createUser
+}

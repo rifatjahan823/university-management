@@ -1,26 +1,27 @@
-
-import express, { Response, Request, urlencoded, Application } from 'express';
 import cors from 'cors';
-import router from './app/modules/users/user.route';
-import { createUser } from './app/modules/users/user.service'
+import express, {  Application } from 'express'
+import globalErrorHandler from './app/middlewares/globalErrorHandler';
+import { UserRoute } from './app/modules/users/user.route';
+// import ApiError from './Error/ApiError';
 
 
-const app: Application = express()
+const app: Application = express();
 
-app.use(cors())
-app.use(express.json())
-app.use(urlencoded({ extended: true }))
+app.use(cors());
 
-//application route
+// Parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/v1/users',router)
+app.use('/api/v1/users/', UserRoute.router);
 
+//Testing
+// app.get('/', async (req: Request, res: Response, next: NextFunction) => {
+//    console.log('x')
 
+// })
 
-//testing
-app.get('/', async(req: Request, res: Response) => {
-  createUser({id:'999',role:"student",password:'123'})
-  res.send('Hello World!')
-})
+// Global error handler
+app.use(globalErrorHandler);
 
-export default app
+export default app;
