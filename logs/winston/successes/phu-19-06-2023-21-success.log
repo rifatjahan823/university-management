@@ -1,0 +1,12 @@
+{
+  message: '😍 Databse connected successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-19T15:27:12.287Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-19T15:27:12.310Z'
+}

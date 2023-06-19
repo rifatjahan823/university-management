@@ -7,6 +7,7 @@ import ApiError from '../../Error/ApiError';
 import handleValidationerror from '../../Error/handleValidationError';
 import { errorLogger } from '../../shared/logger';
 import { ZodError } from 'zod';
+import handleZodError from '../../Error/handleZodError';
 
 // global error handler
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
@@ -25,12 +26,14 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;
-  } else if (error instanceof ZodError) {
-    const simplifiedError = handleZodError(error);
+  } 
+  else if (error instanceof ZodError) {
+    const simplifiedError =handleZodError(error);
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;
-  } else if (error instanceof ApiError) {
+  }
+   else if (error instanceof ApiError) {
     statusCode = error?.statusCode;
     message = error?.message;
     errorMessages = error?.message
