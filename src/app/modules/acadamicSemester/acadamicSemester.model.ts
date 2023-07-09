@@ -10,7 +10,7 @@ const acadamicSemesterSchema=new Schema<IAcadamicSemester,AcadamicSemesterModel>
         enum:acadamicSemesterTitle
     },
     year:{
-        type: Number, required: true
+        type:String, required: true
     },
     code:{
         type: String, required: true,

@@ -28,10 +28,13 @@ import { Model } from "mongoose";
 
 export type IAcadamicSemester={
     title: IAcadamicSemesterTitle;
-    year:number;
+    year:string,
     code:IacadamicSemesterCode;
     startMonth:IAcadamicSemesterMonth;
     endMonth:IAcadamicSemesterMonth
 }
 
 export type AcadamicSemesterModel=Model<IAcadamicSemester>
+
+export type IAcadamicSemesterFiltres={
+    searchTerm?:string;}

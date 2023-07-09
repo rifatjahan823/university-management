@@ -18,7 +18,7 @@ const handleValidationerror = (
     statusCode,
     message: 'Validation Error',
     errorMessages: errors,
-  };
+  }
 };
 
 export default handleValidationerror;

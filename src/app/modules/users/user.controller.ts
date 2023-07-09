@@ -6,9 +6,8 @@ import status from 'http-status'
 
 const createUsers = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const { user } = req.body;
-    const result = await UserService.createUser(user);
-    next();
+    const { ...userData } = req.body;
+    const result = await UserService.createUser(userData);
     sendResponse(res,{
         statusCode:status.OK,
         success:true,
