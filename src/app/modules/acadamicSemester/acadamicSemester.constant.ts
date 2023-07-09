@@ -16,3 +16,7 @@ export const acadamicSemesterMonth:IAcadamicSemesterMonth[]=[
     Summer:"02",
     Fall:"03"
   }
+
+  export const acadamicSemesterSearchFields=['title','code','year']
+
+  export const acadamicSemesterFilterableFields=['searchTerm','title','code','year']

@@ -1,0 +1,67 @@
+{
+  errno: undefined,
+  code: 'ECONNREFUSED',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.mkhfv0k.mongodb.net',
+  level: 'error',
+  message: 'Fail to connect database 😢 querySrv ECONNREFUSED _mongodb._tcp.cluster0.mkhfv0k.mongodb.net',
+  stack: 'Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.mkhfv0k.mongodb.net\n' +
+    '    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:251:17)',
+  label: 'right meow!',
+  timestamp: '2023-07-04T01:22:19.097Z'
+}
+{
+  errno: undefined,
+  code: 'ECONNREFUSED',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.mkhfv0k.mongodb.net',
+  level: 'error',
+  message: 'Fail to connect database 😢 querySrv ECONNREFUSED _mongodb._tcp.cluster0.mkhfv0k.mongodb.net',
+  stack: 'Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.mkhfv0k.mongodb.net\n' +
+    '    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:251:17)',
+  label: 'right meow!',
+  timestamp: '2023-07-04T01:22:45.710Z'
+}
+{
+  stringValue: '"23"',
+  messageFormat: undefined,
+  kind: 'number',
+  value: '23',
+  path: 'year',
+  reason: null,
+  valueType: 'string',
+  model: Model { AcadamicSemester },
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-04T01:30:01.104Z'
+}
+{
+  stringValue: '"i"',
+  messageFormat: undefined,
+  kind: 'number',
+  value: 'i',
+  path: 'year',
+  reason: null,
+  valueType: 'string',
+  model: Model { AcadamicSemester },
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-04T01:32:15.798Z'
+}
+{
+  ok: 0,
+  code: 2,
+  codeName: 'BadValue',
+  '$clusterTime': {
+    clusterTime: new Timestamp({ t: 1688435090, i: 4 }),
+    signature: {
+      hash: Binary.createFromBase64("/e6844yIIrq6IvpyGCiarVmO1DI=", 0),
+      keyId: new Long("7239236152719310854")
+    }
+  },
+  operationTime: new Timestamp({ t: 1688435090, i: 4 }),
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-07-04T01:44:56.412Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
